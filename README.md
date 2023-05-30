@@ -1,5 +1,7 @@
 # daily-standup
 
+![screenshots](./asserts/screenshots.gif)
+
 ## Project setup
 ```
 npm install
