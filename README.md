@@ -2,6 +2,9 @@
 
 ![screenshots](./asserts/screenshots.gif)
 
+## Usage
+Download the single html file from [release](https://github.com/futuretea/daily-standup/releases)
+
 ## Project setup
 ```
 npm install
