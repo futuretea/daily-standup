@@ -10,7 +10,8 @@
   "dependencies": {
     "core-js": "^3.30.2",
     "survey-vue": "^1.9.89",
-    "vue": "^2.7.14"
+    "vue": "^2.7.14",
+    "vue-clipboard2": "^0.3.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "4.5.19",

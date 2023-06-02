@@ -1,6 +1,14 @@
 <template>
   <div>
     <Survey :survey="survey" id="surveyContainer" />
+    <div v-if="isSurveyCompleted">
+      <textarea v-model="surveyResults" class="sd-input sd-comment" cols="50" rows="5" style="resize: both;"/>
+      <div id="copy" class="sv-action">
+        <div class="sv-action__content">
+         <input type="button" value="Copy" title="Copy" class="sd-btn" @click="copyResults">
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,7 +60,7 @@ const surveyJson = {
   showQuestionNumbers: "off",
   pageNextText: "Next",
   pagePrevText: "Previous",
-  completeText: "Close",
+  completeText: "Finish",
   showPrevButton: true,
   firstPageIsStarted: true,
   startSurveyText: "Let's go!",
@@ -79,7 +87,16 @@ export default {
     displayResults(sender) {
       this.surveyResults = JSON.stringify(sender.data, null, 4);
       this.isSurveyCompleted = true;
-    }
+    },
+    copyResults: function () {
+        this.$copyText(this.surveyResults).then(function (e) {
+          alert('Copied')
+          console.log(e)
+        }, function (e) {
+          alert('Can not copy')
+          console.log(e)
+        })
+      }
   },
 }
 </script>

@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <DailyStandUp />
+    <DailyStandup />
   </div>
 </template>
 
 <script>
-import DailyStandUp from './components/DailyStandUp.vue'
+import DailyStandup from './components/DailyStandup.vue'
 
 export default {
   name: 'App',
   components: {
-    DailyStandUp
+    DailyStandup
   }
 }
 </script>
