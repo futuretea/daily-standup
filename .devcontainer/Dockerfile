@@ -1,5 +1,5 @@
 # Use an official Node runtime as a parent image
-ARG NODE_VERSION=14.21.3
+ARG NODE_VERSION=18.19.0
 FROM node:${NODE_VERSION}-alpine
 
 # Set the working directory in the Docker image
